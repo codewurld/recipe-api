@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const path = require('path');
 const dotenv = require('dotenv');
-const PORT = process.env.PORT || 8014
+const PORT = process.env.PORT || 8017;
 const connectDB = require('./config/db');
 const recipeRoute = require('./routes/recipe')
 
@@ -18,6 +18,8 @@ app.use('/recipe', recipeRoute);
 
 
 
-app.listen(PORT, console.log(
+
+module.exports = app.listen(PORT, console.log(
     `Server running on port ${PORT}`
 ))
+
